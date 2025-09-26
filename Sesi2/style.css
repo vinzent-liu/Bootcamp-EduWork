@@ -1,0 +1,220 @@
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: #f4f8fb;
+  margin: 0;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.navbar {
+  /* Gradient background inspired by CSS generator */
+  background: linear-gradient(90deg, #1976d2 0%, #00c6ff 100%);
+  color: #fff;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.navbar .brand {
+  font-weight: bold;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+.navbar .nav {
+  display: flex;
+  gap: 32px;
+}
+.navbar .nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.navbar .nav a:hover {
+  color: #90caf9;
+  transform: scale(1.08);
+  text-shadow: 0 2px 8px rgba(0,198,255,0.15);
+}
+.main-section {
+  width: 100%;
+  margin: 24px 0 0 0;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 32px 48px;
+  box-sizing: border-box;
+  flex: 1;
+}
+.header-flex {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.header-left {
+  flex: 1;
+}
+.header-right {
+  flex-shrink: 0;
+  width: 220px;
+  height: 220px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.biodata-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 32px;
+}
+.biodata-table td {
+  background: #f4f8fb;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center !important;
+  font-size: 1em;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+.portfolio-flex {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.portfolio-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  width: 280px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 16px;
+}
+.portfolio-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  margin-bottom: 10px;
+}
+.portfolio-card b {
+  display: block;
+  font-size: 1.08em;
+  font-weight: 700;
+  margin: 8px 0 4px 0;
+  word-break: break-word;
+  white-space: normal;
+  text-align: left;
+}
+.footer {
+  text-align: center;
+  color: #fff;
+  font-size: 0.98em;
+  margin: 32px 0 12px 0;
+  background: linear-gradient(90deg, #1976d2 0%, #00c6ff 100%);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+  padding: 16px 0 8px 0;
+}
+
+/* ========================= */
+/* Layout agar footer selalu di bawah layar (mobile & tablet) */
+/* ========================= */
+html, body {
+  height: 100%;
+}
+
+/* ========================= */
+/* Responsive Design - Tablet */
+/* ========================= */
+@media (max-width: 900px) {
+  .main-section {
+    padding: 24px 12px;
+  }
+  .header-flex {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  .header-right {
+    margin: 0 auto;
+  }
+  .portfolio-flex {
+    gap: 12px;
+  }
+  .portfolio-card {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .biodata-table {
+    font-size: 0.98em;
+  }
+}
+
+/* ========================= */
+/* Responsive Design - Mobile */
+/* ========================= */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 12px;
+    gap: 8px;
+  }
+  .main-section {
+    padding: 12px 4px;
+  }
+  .header-flex {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
+  .header-right {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
+  .portfolio-flex {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
+  .portfolio-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .biodata-table td {
+    padding: 8px;
+    font-size: 0.95em;
+  }
+  .biodata-table {
+    font-size: 0.95em;
+  }
+}
+
+/* ========================= */
+/* Responsive Design - Desktop (default) */
+/* ========================= */
+/* Semua style di atas otomatis berlaku untuk desktop */
