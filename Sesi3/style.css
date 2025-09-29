@@ -1,0 +1,396 @@
+/* ====== Tambahan dari style di index.html (Bootstrap Modern) ====== */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #fff 100%);
+  color: #222;
+}
+.navbar {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(168,85,247,0.07);
+  font-family: 'Poppins', Arial, sans-serif;
+}
+.navbar-nav {
+  align-items: center;
+}
+.nav-link {
+  position: relative;
+  font-weight: 500;
+  margin-right: 16px;
+  color: #222 !important;
+  transition: color 0.2s;
+}
+.nav-link.active, .nav-link:hover {
+  color: #a855f7 !important;
+}
+.nav-link.active::after, .nav-link:hover::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -4px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #a855f7 0%, #ec4899 100%);
+  transition: width 0.3s;
+  width: 100%;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 50%; right: 50%; bottom: -4px;
+  height: 3px;
+  background: transparent;
+  transition: width 0.3s;
+  width: 0;
+}
+.btn-connect {
+  background: linear-gradient(90deg, #a855f7 0%, #ec4899 100%);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 28px;
+  box-shadow: 0 2px 8px rgba(168,85,247,0.12);
+  letter-spacing: 1px;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.btn-connect:hover {
+  background: linear-gradient(90deg, #ec4899 0%, #a855f7 100%);
+  box-shadow: 0 4px 16px rgba(168,85,247,0.18);
+}
+.hero-bg {
+  background: linear-gradient(135deg, #f3e8ff 0%, #f8fafc 100%);
+  border-radius: 32px;
+  box-shadow: 0 2px 16px rgba(168,85,247,0.08);
+  padding: 48px 32px;
+  margin-bottom: 32px;
+}
+.hero-photo {
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+  border-radius: 32px;
+  box-shadow: 0 2px 16px rgba(168,85,247,0.12);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+}
+.hero-photo img {
+  border-radius: 24px;
+  max-width: 220px;
+  width: 100%;
+  box-shadow: 0 2px 12px rgba(168,85,247,0.10);
+}
+.btn-cv {
+  background: linear-gradient(90deg, #a855f7 0%, #ec4899 100%);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 28px;
+  box-shadow: 0 2px 8px rgba(168,85,247,0.12);
+  letter-spacing: 1px;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.btn-cv:hover {
+  background: linear-gradient(90deg, #ec4899 0%, #a855f7 100%);
+  box-shadow: 0 4px 16px rgba(168,85,247,0.18);
+}
+.about-card {
+  border-radius: 24px;
+  box-shadow: 0 2px 16px rgba(168,85,247,0.08);
+  border: none;
+  margin-bottom: 24px;
+}
+.work-card {
+  border-radius: 24px;
+  box-shadow: 0 2px 16px rgba(168,85,247,0.10);
+  border: none;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.work-card:hover {
+  box-shadow: 0 4px 24px rgba(168,85,247,0.18);
+  transform: translateY(-4px) scale(1.03);
+}
+.work-badge {
+  background: linear-gradient(90deg, #a855f7 0%, #ec4899 100%);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 6px 18px;
+  font-size: 0.95em;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+.portfolio-card {
+  border-radius: 24px;
+  box-shadow: 0 2px 16px rgba(168,85,247,0.10);
+  border: none;
+  transition: box-shadow 0.2s, transform 0.2s;
+  overflow: hidden;
+}
+.portfolio-card:hover {
+  box-shadow: 0 4px 24px rgba(168,85,247,0.18);
+  transform: scale(1.03);
+}
+.portfolio-card img {
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+.portfolio-card:hover img {
+  transform: scale(1.07);
+}
+.portfolio-title {
+  color: #a855f7;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+.portfolio-desc {
+  color: #444;
+  font-size: 0.98em;
+}
+.footer {
+  background: linear-gradient(90deg, #a855f7 0%, #ec4899 100%);
+  color: #fff;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 -2px 8px rgba(168,85,247,0.08);
+  font-size: 1em;
+  padding: 24px 0 12px 0;
+}
+.footer a img {
+  filter: brightness(1.2);
+  transition: filter 0.2s;
+}
+.footer a:hover img {
+  filter: brightness(2) drop-shadow(0 2px 6px #ec4899);
+}
+@media (max-width: 768px) {
+  .hero-bg {
+    padding: 32px 8px;
+  }
+  .about-card, .work-card, .portfolio-card {
+    border-radius: 16px;
+  }
+}
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: #f4f8fb;
+  margin: 0;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.navbar {
+  /* Gradient background inspired by CSS generator */
+  background: linear-gradient(90deg, #1976d2 0%, #00c6ff 100%);
+  color: #fff;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.navbar .brand {
+  font-weight: bold;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+.navbar .nav {
+  display: flex;
+  gap: 32px;
+}
+.navbar .nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.navbar .nav a:hover {
+  color: #90caf9;
+  transform: scale(1.08);
+  text-shadow: 0 2px 8px rgba(0,198,255,0.15);
+}
+.main-section {
+  width: 100%;
+  margin: 24px 0 0 0;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 32px 48px;
+  box-sizing: border-box;
+  flex: 1;
+}
+.header-flex {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.header-left {
+  flex: 1;
+}
+.header-right {
+  flex-shrink: 0;
+  width: 220px;
+  height: 220px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.biodata-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 32px;
+}
+.biodata-table td {
+  background: #f4f8fb;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center !important;
+  font-size: 1em;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+.portfolio-flex {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.portfolio-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  width: 280px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 16px;
+}
+.portfolio-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  margin-bottom: 10px;
+}
+.portfolio-card b {
+  display: block;
+  font-size: 1.08em;
+  font-weight: 700;
+  margin: 8px 0 4px 0;
+  word-break: break-word;
+  white-space: normal;
+  text-align: left;
+}
+.footer {
+  text-align: center;
+  color: #fff;
+  font-size: 0.98em;
+  margin: 32px 0 12px 0;
+  background: linear-gradient(90deg, #1976d2 0%, #00c6ff 100%);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+  padding: 16px 0 8px 0;
+}
+
+/* ========================= */
+/* Layout agar footer selalu di bawah layar (mobile & tablet) */
+/* ========================= */
+html, body {
+  height: 100%;
+}
+
+/* ========================= */
+/* Responsive Design - Tablet */
+/* ========================= */
+@media (max-width: 900px) {
+  .main-section {
+    padding: 24px 12px;
+  }
+  .header-flex {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  .header-right {
+    margin: 0 auto;
+  }
+  .portfolio-flex {
+    gap: 12px;
+  }
+  .portfolio-card {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .biodata-table {
+    font-size: 0.98em;
+  }
+}
+
+/* ========================= */
+/* Responsive Design - Mobile */
+/* ========================= */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 12px;
+    gap: 8px;
+  }
+  .main-section {
+    padding: 12px 4px;
+  }
+  .header-flex {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
+  .header-right {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
+  .portfolio-flex {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
+  .portfolio-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .biodata-table td {
+    padding: 8px;
+    font-size: 0.95em;
+  }
+  .biodata-table {
+    font-size: 0.95em;
+  }
+}
+
+/* ========================= */
+/* Responsive Design - Desktop (default) */
+/* ========================= */
+/* Semua style di atas otomatis berlaku untuk desktop */
