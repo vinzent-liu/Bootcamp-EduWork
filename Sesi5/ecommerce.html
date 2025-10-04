@@ -9,15 +9,85 @@
   <style>
     /* Font dan background dasar */
     body { font-family: 'Poppins', Arial, sans-serif; background: #f8f9fa; }
+      /* Custom CSS untuk styling card dan komponen */
     /* Efek hover pada card produk */
-    .product-card { transition: box-shadow .2s; }
-    .product-card:hover { box-shadow: 0 4px 24px #a855f733; }
-    /* Gambar produk agar proporsional */
-    .product-img { height: 180px; object-fit: cover; border-radius: 1rem 1rem 0 0; }
-    /* Tombol kategori aktif */
-    .category-btn.active { background: #a855f7; color: #fff; }
-    /* Search bar responsif */
-    .search-bar { max-width: 350px; }
+      .product-card {
+        transition: box-shadow .2s, transform .2s;
+        border: none;
+        border-radius: 1.2rem;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 2px 12px #a855f71a;
+      }
+      .product-card:hover {
+        box-shadow: 0 8px 32px #a855f74d;
+        transform: translateY(-6px) scale(1.03);
+      }
+      .product-img {
+        height: 180px;
+        object-fit: cover;
+        border-radius: 1.2rem 1.2rem 0 0;
+        border-bottom: 1px solid #f3e8ff;
+      }
+      .category-btn.active {
+        background: linear-gradient(90deg, #a855f7 0%, #ec4899 100%);
+        color: #fff;
+        border: none;
+        box-shadow: 0 2px 8px #a855f733;
+      }
+      .category-btn {
+        border-radius: 2rem !important;
+        font-weight: 500;
+      }
+      .search-bar { max-width: 350px; border-radius: 2rem; }
+      .btn-outline-success {
+        border-radius: 2rem;
+        font-weight: 500;
+        border-width: 2px;
+        color: #a855f7;
+        border-color: #a855f7;
+        background: #fff;
+        transition: background .2s, color .2s;
+      }
+      .btn-outline-success:hover {
+        background: linear-gradient(90deg, #a855f7 0%, #ec4899 100%);
+        color: #fff;
+        border-color: #a855f7;
+      }
+      .fw-bold.price {
+        color: #a855f7;
+        font-size: 1.15em;
+        letter-spacing: 0.5px;
+      }
+      .modal-content {
+        border-radius: 1.2rem;
+        box-shadow: 0 8px 32px #a855f74d;
+      }
+      .modal-body {
+        padding-bottom: 2rem;
+      }
+      .btn-success {
+        border-radius: 2rem;
+        background: linear-gradient(90deg, #a855f7 0%, #ec4899 100%);
+        border: none;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+      .btn-success:hover {
+        background: linear-gradient(90deg, #ec4899 0%, #a855f7 100%);
+      }
+      .navbar {
+        border-radius: 0 0 1.2rem 1.2rem;
+        box-shadow: 0 2px 12px #a855f71a;
+      }
+      .card-title {
+        font-size: 1.18em;
+        font-weight: 600;
+        color: #222;
+      }
+      .text-primary.fw-bold {
+        color: #a855f7 !important;
+      }
   </style>
 </head>
 <body>
@@ -54,8 +124,8 @@
             <h4 class="card-title" id="modalName"></h4>
             <div class="mb-2 text-primary fw-bold" id="modalKategori"></div>
             <p class="card-text mb-2" id="modalDeskripsi"></p>
-            <div class="fw-bold mb-3" id="modalHarga" style="color:#a855f7;"></div>
-            <button class="btn btn-success w-100" onclick="alert('Pembelian berhasil! (simulasi)')">Konfirmasi Beli</button>
+              <div class="fw-bold price mb-3" id="modalHarga"></div>
+              <button class="btn btn-success w-100 py-2" onclick="alert('Pembelian berhasil! (simulasi)')"><i class="bi bi-bag-check me-1"></i>Konfirmasi Beli</button>
           </div>
         </div>
       </div>
@@ -114,8 +184,8 @@
               <h5 class=\"card-title\">${p.name}</h5>
               <div class=\"mb-2 text-primary fw-bold\">${p.kategori}</div>
               <p class=\"card-text mb-2\">${p.deskripsi}</p>
-              <div class=\"fw-bold mb-2\" style=\"color:#a855f7;\">Rp${p.harga.toLocaleString('id-ID')}</div>
-              <button class=\"btn btn-sm btn-outline-success w-100\" onclick=\"goToCheckout(${products.indexOf(p)})\">Beli</button>
+                <div class=\"fw-bold price mb-2\">Rp${p.harga.toLocaleString('id-ID')}</div>
+                <button class=\"btn btn-sm btn-outline-success w-100 py-2\" onclick=\"goToCheckout(${products.indexOf(p)})\"><i class="bi bi-cart-plus me-1"></i>Beli</button>
             </div>
           </div>
         </div>
