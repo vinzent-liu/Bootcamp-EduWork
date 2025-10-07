@@ -18,9 +18,3 @@ Catatan teknis:
 - `index.php` include `backend.php` sehingga form dapat menampilkan ulang nilai input saat terjadi error.
 - Saat `backend.php` diakses langsung (action form), ia akan merender hasil HTML singkat lalu exit.
 
-Langkah pengembangan selanjutnya (opsional):
-- Simpan data ke database menggunakan MySQL (mysqli atau PDO).
-- Tambah CSRF token dan sanitasi/escaping lebih ketat.
-- Tambah unit test atau integrasi lokal jika diperlukan.
-
-Jika ada yang ingin diperbaiki atau ditambah (contoh menambah koneksi DB), beri tahu saya dan saya akan bantu implementasinya.
