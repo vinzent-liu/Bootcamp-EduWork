@@ -1,0 +1,39 @@
+/* General */
+body {
+	background: #f4f6f8;
+	color: #222;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Navbar */
+.navbar-brand { font-weight:700; letter-spacing: .3px; }
+.navbar { box-shadow: 0 1px 6px rgba(16,24,40,.08); }
+
+/* Hero */
+.site-hero {
+	background: linear-gradient(90deg, rgba(99,102,241,0.06), rgba(59,130,246,0.03));
+	padding: 2.5rem 0;
+	border-radius: .5rem;
+}
+
+/* Product cards */
+.card { border: 0; border-radius: .8rem; overflow: hidden; }
+.card-img-top { height: 220px; object-fit: cover; }
+.card-body { padding: 1rem; }
+.card-title { font-size: 1.05rem; }
+.badge-category { background: rgba(0,0,0,0.07); color: #111; font-weight:600; }
+
+/* Buttons */
+.btn-primary { background: #3b82f6; border-color: #3b82f6; }
+.btn-primary:hover { background:#2563eb; border-color:#2563eb; }
+
+/* Footer */
+.site-footer { margin-top: 3rem; padding: 2rem 0; color: #6b7280; }
+
+/* Small screens tweaks */
+@media (max-width: 576px) {
+	.card-img-top { height: 160px; }
+}
+
+/* Utility */
+.muted { color: #6b7280; }
